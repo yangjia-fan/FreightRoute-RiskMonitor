@@ -492,6 +492,12 @@ def build_html(radius_km: float, half_life_days: float) -> str:
     </div>
 
     <div id="incidentsList"></div>
+    <div style="margin-top:16px; padding-top:8px; border-top:1px solid var(--border); font-size:12px; color:var(--muted);">
+      View project on 
+      <a href="https://github.com/yangjia-fan/FreightRoute-RiskMonitor" target="_blank" style="color:var(--muted); text-decoration:none;">
+        GitHub
+      </a>
+    </div>
   </div>
 
   <div id="map"></div>
