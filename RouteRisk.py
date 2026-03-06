@@ -413,11 +413,13 @@ def build_html(radius_km: float, half_life_days: float) -> str:
   .modalOverlay.open{{ display:flex; }}
   .modalCard{{
     width:min(680px, calc(100vw - 48px));
+    max-height:80vh;
     background:var(--panel);
     border:1px solid var(--border);
     border-radius:16px;
     box-shadow:0 18px 60px rgba(0,0,0,0.5);
     padding:14px 14px 12px 14px;
+    overflow-y:auto;
   }}
   .modalHeader{{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:10px; }}
   .modalTitle{{ font-size:14px; font-weight:700; color:var(--text); }}
