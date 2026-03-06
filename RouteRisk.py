@@ -511,6 +511,7 @@ def build_html(radius_km: float, half_life_days: float) -> str:
         GitHub
       </a>
     </div>
+  </div>
 
   <div id="map"></div>
 </div>
