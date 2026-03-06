@@ -51,36 +51,35 @@ def api_refresh():
             half_life_days=DEFAULT_HALF_LIFE_DAYS
         )
 
-        return {
-            "generated_utc": result.get("generated_utc"),
-            "n": result.get("n"),
-            "status": "pipeline_success"
-        }
+        print("Refresh pipeline ran successfully")
 
     except Exception as pipeline_error:
+
+        print("Pipeline failed, falling back to GitHub:", pipeline_error)
+
         try:
-            # fallback to GitHub
             r = requests.get(
                 "https://raw.githubusercontent.com/yangjia-fan/FreightRoute-RiskMonitor/main/dist/summary.json",
                 timeout=20
             )
             r.raise_for_status()
-            summary = r.json()
-
-            return {
-                "generated_utc": summary.get("generated_utc"),
-                "n": summary.get("n"),
-                "status": "github_fallback",
-                "pipeline_error": str(pipeline_error)
-            }
+            result = r.json()
 
         except Exception as github_error:
-
             raise HTTPException(
                 status_code=500,
                 detail={
-                    "status": "all_refresh_methods_failed",
                     "pipeline_error": str(pipeline_error),
-                    "github_error": str(github_error)
-                }
+                    "github_error": str(github_error),
+                },
             )
+
+    # Always print what timestamp we ended up with
+    generated = result.get("generated_utc")
+    print("Refresh endpoint returning generated_utc:", generated)
+
+    return {
+        "generated_utc": generated,
+        "n": result.get("n"),
+        "status": "ok"
+    }
