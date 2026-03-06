@@ -270,7 +270,7 @@ def write_artifacts(enriched: List[Dict[str, Any]], radius_km: float, half_life_
     SUMMARY_OUT.write_text(
         json.dumps(
             {
-                "generated_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+                "generated_utc": datetime.now().strftime("%Y-%m-%d %H:%M"),
                 "n": len(enriched),
                 "params": {"radius_km": radius_km, "half_life_days": half_life_days},
                 "top5_by_severity": [
@@ -570,14 +570,8 @@ def build_html(radius_km: float, half_life_days: float) -> str:
     return (s || '').replace(/[&<>"']/g, (c) => ({{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}}[c]));
   }}
 
-  function formatLocal(iso) {{
-    if (!iso) return '—';
-    const d = new Date(String(iso));
-    if (isNaN(d.getTime())) return String(iso);
-    return d.toLocaleString(undefined, {{
-      year: 'numeric', month: 'short', day: 'numeric',
-      hour: 'numeric', minute: '2-digit'
-    }});
+  function formatLocal(ts) {{
+    return ts || '—';
   }}
 
   function setLastUpdated(isoUtc) {{
