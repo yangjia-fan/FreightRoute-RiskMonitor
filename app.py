@@ -46,36 +46,41 @@ def api_summary():
 @app.post("/api/refresh")
 def api_refresh():
     try:
-        # 1) try live pipeline refresh
         result = run_pipeline(
             radius_km=DEFAULT_RADIUS_KM,
             half_life_days=DEFAULT_HALF_LIFE_DAYS
         )
+
         return {
-            "status": "pipeline_success",
-            "detail": result
+            "generated_utc": result.get("generated_utc"),
+            "n": result.get("n"),
+            "status": "pipeline_success"
         }
 
     except Exception as pipeline_error:
         try:
-            # 2) fallback: read latest committed JSON from GitHub repo
-            incidents = load_remote_json(GITHUB_INCIDENTS_URL)
-            summary = load_remote_json(GITHUB_SUMMARY_URL)
+            # fallback to GitHub
+            r = requests.get(
+                "https://raw.githubusercontent.com/yangjia-fan/FreightRoute-RiskMonitor/main/dist/summary.json",
+                timeout=20
+            )
+            r.raise_for_status()
+            summary = r.json()
 
             return {
-                "status": "pipeline_failed_using_github_repo",
-                "pipeline_error": str(pipeline_error),
-                "incidents": incidents,
-                "summary": summary
+                "generated_utc": summary.get("generated_utc"),
+                "n": summary.get("n"),
+                "status": "github_fallback",
+                "pipeline_error": str(pipeline_error)
             }
 
         except Exception as github_error:
-            # 3) final failure
+
             raise HTTPException(
                 status_code=500,
                 detail={
-                    "status": "pipeline_failed_and_github_fallback_failed",
+                    "status": "all_refresh_methods_failed",
                     "pipeline_error": str(pipeline_error),
-                    "github_error": str(github_error),
-                },
+                    "github_error": str(github_error)
+                }
             )
