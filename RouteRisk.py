@@ -385,8 +385,18 @@ def build_html(radius_km: float, half_life_days: float) -> str:
 
   .headerRow{{ display:flex; align-items:flex-start; justify-content:space-between; gap:10px; }}
   .headerRight{{ display:flex; flex-direction:column; align-items:flex-end; gap:6px; }}
-  .metaLine{{ font-size:12px; color:var(--muted); display:flex; gap:6px; align-items:baseline; }}
-  .metaLine .val{{ color:var(--text); font-weight:600; }}
+  .metaLine{{
+    font-size:12px;
+    color:var(--muted);
+    display:flex;
+    gap:6px;
+    align-items:baseline;
+  }}
+
+  .metaLine .val{{
+    color:var(--text);
+    font-weight:600;
+  }}
 
   /* Center modal */
   .modalOverlay{{
@@ -494,7 +504,7 @@ def build_html(radius_km: float, half_life_days: float) -> str:
     <div id="incidentsList"></div>
     <div style="margin-top:16px; padding-top:8px; border-top:1px solid var(--border); font-size:12px; color:var(--muted);">
       View project on 
-      <a href="https://github.com/yangjia-fan/FreightRoute-RiskMonitor" target="_blank" style="text-decoration:underline;">
+      <a href="https://github.com/yangjia-fan/FreightRoute-RiskMonitor" target="_blank">
         GitHub
       </a>
     </div>
@@ -957,7 +967,7 @@ def run_pipeline(radius_km: float, half_life_days: float) -> Dict[str, Any]:
     write_artifacts(enriched, radius_km=radius_km, half_life_days=half_life_days)
     return {
         "ok": True,
-        "generated_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+        "generated_utc": datetime.now().strftime("%Y-%m-%d %H:%M"),
         "n": len(enriched),
         "params": {"radius_km": radius_km, "half_life_days": half_life_days},
     }
@@ -1050,8 +1060,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
-
-# -- Instructions --
-# Run in Shell: python RouteRisk.py --serve --port 8787
-# Open Endpoint in Browser: http://127.0.0.1:8787/
