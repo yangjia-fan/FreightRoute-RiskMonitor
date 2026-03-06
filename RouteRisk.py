@@ -356,7 +356,7 @@ def build_html(radius_km: float, half_life_days: float) -> str:
     gap:8px;
     cursor:pointer;
     user-select:none;
-    font-size:13px;
+    font-size:10px;
     color:var(--text);
   }}
   .checkrow input{{ cursor:pointer; }}
