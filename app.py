@@ -1,53 +1,40 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.responses import HTMLResponse
 import json
-import time
+import requests
 
-from RouteRisk import INCIDENTS_OUT, SUMMARY_OUT, HTML_OUT
+from RouteRisk import run_pipeline, INCIDENTS_OUT, SUMMARY_OUT, HTML_OUT
 
 DEFAULT_RADIUS_KM = 200.0
 DEFAULT_HALF_LIFE_DAYS = 14.0
-REFRESH_SECONDS = 300  # 5 minutes
+
+GITHUB_INCIDENTS_URL = "https://raw.githubusercontent.com/yangjia-fan/FreightRoute-RiskMonitor/main/dist/incidents.json"
+GITHUB_SUMMARY_URL = "https://raw.githubusercontent.com/yangjia-fan/FreightRoute-RiskMonitor/main/dist/summary.json"
 
 app = FastAPI()
 
-_last_load = 0.0
-_cache = {
-    "html": None,
-    "incidents": None,
-    "summary": None,
-}
+
+def ensure_build():
+    if not INCIDENTS_OUT.exists() or not SUMMARY_OUT.exists() or not HTML_OUT.exists():
+        run_pipeline(radius_km=DEFAULT_RADIUS_KM, half_life_days=DEFAULT_HALF_LIFE_DAYS)
 
 
-def reload_files_if_needed(force: bool = False) -> None:
-    global _last_load
-
-    if not force and (time.time() - _last_load < REFRESH_SECONDS):
-        return
-
-    _cache["html"] = HTML_OUT.read_text(encoding="utf-8")
-    _cache["incidents"] = json.loads(INCIDENTS_OUT.read_text(encoding="utf-8"))
-    _cache["summary"] = json.loads(SUMMARY_OUT.read_text(encoding="utf-8"))
-    _last_load = time.time()
-
-    print("Reloaded static files from dist/")
-
-
-@app.on_event("startup")
-def startup_load() -> None:
-    reload_files_if_needed(force=True)
+def load_remote_json(url: str):
+    r = requests.get(url, timeout=20)
+    r.raise_for_status()
+    return r.json()
 
 
 @app.get("/", response_class=HTMLResponse)
 def home():
-    reload_files_if_needed()
-    return _cache["html"]
+    ensure_build()
+    return HTML_OUT.read_text(encoding="utf-8")
 
 
 @app.get("/api/incidents")
 def api_incidents():
-    reload_files_if_needed()
-    return _cache["incidents"]
+    ensure_build()
+    return json.loads(INCIDENTS_OUT.read_text(encoding="utf-8"))
 
 
 @app.get("/api/summary")
@@ -55,9 +42,40 @@ def api_summary():
     ensure_build()
     return json.loads(SUMMARY_OUT.read_text(encoding="utf-8"))
 
+
 @app.post("/api/refresh")
 def api_refresh():
     try:
-        return run_pipeline(radius_km=DEFAULT_RADIUS_KM, half_life_days=DEFAULT_HALF_LIFE_DAYS)
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        # 1) try live pipeline refresh
+        result = run_pipeline(
+            radius_km=DEFAULT_RADIUS_KM,
+            half_life_days=DEFAULT_HALF_LIFE_DAYS
+        )
+        return {
+            "status": "pipeline_success",
+            "detail": result
+        }
+
+    except Exception as pipeline_error:
+        try:
+            # 2) fallback: read latest committed JSON from GitHub repo
+            incidents = load_remote_json(GITHUB_INCIDENTS_URL)
+            summary = load_remote_json(GITHUB_SUMMARY_URL)
+
+            return {
+                "status": "pipeline_failed_using_github_repo",
+                "pipeline_error": str(pipeline_error),
+                "incidents": incidents,
+                "summary": summary
+            }
+
+        except Exception as github_error:
+            # 3) final failure
+            raise HTTPException(
+                status_code=500,
+                detail={
+                    "status": "pipeline_failed_and_github_fallback_failed",
+                    "pipeline_error": str(pipeline_error),
+                    "github_error": str(github_error),
+                },
+            )
