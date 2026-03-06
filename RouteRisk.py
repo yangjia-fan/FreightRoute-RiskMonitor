@@ -314,7 +314,7 @@ def build_html(radius_km: float, half_life_days: float) -> str:
     --border:rgba(255,255,255,0.10);
   }}
   body{{ margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; background:var(--bg); color:var(--text); }}
-  #app{{ display:grid; grid-template-columns:350px 1fr; height:100vh; }}
+  #app{{ display:grid; grid-template-columns:318px 1fr; height:100vh; }}
   #sidebar{{ border-right:1px solid var(--border); padding:14px; overflow:auto; background:var(--panel); }}
   #map{{ height:100vh; }}
 
@@ -431,7 +431,7 @@ def build_html(radius_km: float, half_life_days: float) -> str:
 <body>
 <div id="app">
   <div id="sidebar">
-    <h2 style="margin:0 0 6px 0;">UKMTO Route Risk Monitor</h2>
+    <h3 style="margin:0 0 6px 0;">UKMTO Route Risk Monitor</h3>
 
     <div class="controls" style="margin-top:6px;">
       <div style="flex:1 1 auto;">
@@ -494,7 +494,7 @@ def build_html(radius_km: float, half_life_days: float) -> str:
     <div id="incidentsList"></div>
     <div style="margin-top:16px; padding-top:8px; border-top:1px solid var(--border); font-size:12px; color:var(--muted);">
       View project on 
-      <a href="https://github.com/yangjia-fan/FreightRoute-RiskMonitor" target="_blank" style="color:var(--muted); text-decoration:none;">
+      <a href="https://github.com/yangjia-fan/FreightRoute-RiskMonitor" target="_blank" style="text-decoration:underline;">
         GitHub
       </a>
     </div>
