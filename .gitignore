@@ -6,3 +6,6 @@ __pycache__/
 # optional: don't commit generated data
 dist/incidents.json
 dist/summary.json
+
+CommitRefetched.py
+RepoIncidentsRefetch.py
