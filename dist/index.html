@@ -21,15 +21,12 @@
   #app{ display:grid; grid-template-columns:450px 1fr; height:100vh; }
   #sidebar{ border-right:1px solid var(--border); padding:14px; overflow:auto; background:var(--panel); }
   #map{ height:100vh; }
-
   .row{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
   .kpi{ border:1px solid var(--border); background:var(--panel2); border-radius:12px; padding:10px 12px; min-width:180px; }
   .kpi .label{ font-size:12px; color:var(--muted); display:flex; align-items:center; gap:6px; }
   .kpi .value{ font-size:22px; font-weight:700; }
-
   .muted{ color:var(--muted); font-size:12px; line-height:1.4; }
   label{ font-size:12px; color:var(--muted); display:block; margin-bottom:6px; }
-
   button, select{
     background:var(--panel2);
     color:var(--text);
@@ -37,10 +34,6 @@
     border-radius:10px;
     padding:8px 10px;
   }
-  button{ cursor:pointer; }
-  button:hover{ filter:brightness(1.1); }
-  button:disabled{ opacity:0.6; cursor:not-allowed; }
-
   .controls{ margin-top:12px; display:flex; gap:10px; align-items:flex-end; flex-wrap:wrap; }
   .checkpanel{
     display:flex;
@@ -63,9 +56,7 @@
     font-size:13px;
     color:var(--text);
   }
-  .checkrow input{ cursor:pointer; }
   .dot{ width:10px; height:10px; border-radius:999px; display:inline-block; border:1px solid rgba(255,255,255,0.25); }
-
   .pill{
     display:inline-block;
     padding:3px 8px;
@@ -75,7 +66,6 @@
     color:var(--text);
     background:rgba(255,255,255,0.04);
   }
-
   .incident{
     border:1px solid var(--border);
     background:var(--panel2);
@@ -86,13 +76,10 @@
   .incident h4{ margin:0 0 6px 0; font-size:14px; }
   .incident .meta{ font-size:12px; color:var(--muted); display:flex; gap:8px; flex-wrap:wrap; }
   .incident .desc{ font-size:12px; color:var(--text); margin-top:8px; white-space:pre-wrap; opacity:0.95; }
-
   .headerRow{ display:flex; align-items:flex-start; justify-content:space-between; gap:10px; }
   .headerRight{ display:flex; flex-direction:column; align-items:flex-end; gap:6px; }
   .metaLine{ font-size:12px; color:var(--muted); display:flex; gap:6px; align-items:baseline; }
   .metaLine .val{ color:var(--text); font-weight:600; }
-
-  /* Center modal */
   .modalOverlay{
     position:fixed;
     inset:0;
@@ -117,8 +104,6 @@
   .modalClose{ background:transparent; border:1px solid var(--border); color:var(--text); border-radius:10px; padding:6px 10px; cursor:pointer; }
   .modalBody{ color:var(--text); font-size:12px; line-height:1.45; }
   .modalBody code{ background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.10); padding:1px 6px; border-radius:8px; }
-
-  /* dark popup */
   .leaflet-popup-content-wrapper, .leaflet-popup-tip{
     background:#0f1620;
     color:#e6edf3;
@@ -145,12 +130,6 @@
           Different Route → Different <b>Proximity</b> to Incidents → Different Risk Index
         </div>
       </div>
-      <!--
-      <div>
-        <label>&nbsp;</label>
-        <button id="resetViewBtn" type="button" title="Fit view to visible markers + lane">Reset view</button>
-      </div>
-      -->
     </div>
 
     <h3 style="margin: 14px 0 8px;">Metrics</h3>
@@ -181,8 +160,6 @@
       <h3 style="margin:0;">Incidents</h3>
 
       <div class="headerRight">
-        <button id="refreshBtn" type="button" title="Re-run the Python refresh on the local server">Refresh</button>
-
         <div class="metaLine">
           <span>Last update:</span>
           <span id="lastUpdated" class="val">—</span>
@@ -190,7 +167,7 @@
 
         <div class="metaLine">
           <span>Status:</span>
-          <span id="statusText" class="val">—</span>
+          <span id="statusText" class="val">Static build</span>
         </div>
       </div>
     </div>
@@ -201,7 +178,6 @@
   <div id="map"></div>
 </div>
 
-<!-- Center modal -->
 <div id="riskModal" class="modalOverlay" aria-hidden="true">
   <div class="modalCard" role="dialog" aria-modal="true" aria-labelledby="riskModalTitle">
     <div class="modalHeader">
@@ -210,55 +186,26 @@
     </div>
     <div class="modalBody">
       <b>Risk Index (0–100)</b><br><br>
-
-      The Risk Index estimates the relative operational risk for vessels travelling
-      along the selected route. It aggregates nearby maritime security incidents and
-      weights them by severity, recency, and proximity to the route.<br><br>
+      The Risk Index estimates relative operational risk for vessels travelling along the selected route.
+      It aggregates nearby maritime security incidents and weights them by severity, recency, and proximity.<br><br>
 
       <b>Step 1 — Raw Risk</b><br>
-      Each incident contributes a score based on three components:<br><br>
-
       <code>RawRisk = Σ (severity × recency × proximity)</code><br><br>
 
       <b>severity</b><br>
-      A keyword-based severity score extracted from the incident description.<br>
-      Higher scores correspond to more dangerous events.<br><br>
-
-      Typical scale:<br>
-      • Suspicious approach / observation → low score<br>
-      • Boarding attempt → moderate score<br>
-      • Confirmed attack / weapon use → high score<br><br>
-
-      The score is capped at <b>20</b> so that extreme outliers cannot dominate the index.<br><br>
+      A deterministic score based on incident description language. More serious language around weapons,
+      attacks, damage, and casualties raises the score, while uncertainty or harmless outcomes reduce it.<br><br>
 
       <b>recency</b><br>
-      Recent incidents carry more weight than older ones using exponential decay:<br><br>
-
       <code>recency = 0.5^(age_days / half_life_days)</code><br><br>
 
-      The parameter <code>half_life_days</code> controls how quickly incidents lose influence.
-      For example, if half-life = 7 days, an incident contributes half as much after one week.<br><br>
-
       <b>proximity</b><br>
-      Incidents closer to the shipping route are more relevant:<br><br>
-
       <code>proximity = exp(−distance_to_lane_km / radius_km)</code><br><br>
 
-      The parameter <code>radius_km</code> determines the spatial decay.
-      Incidents directly on the route receive full weight, while distant events contribute less.<br><br>
-
       <b>Step 2 — Convert Raw Risk to Index</b><br>
-
-      RawRisk is converted into a bounded index between 0 and 100:<br><br>
-
       <code>RiskIndex = 100 × (1 − exp(−RawRisk / 15))</code><br><br>
 
-      This transformation prevents the score from increasing indefinitely when many
-      incidents occur. Instead, the index saturates as risk accumulates, allowing
-      scores to remain comparable across different routes and time periods.<br><br>
-
-      The constant <code>15</code> controls the scaling of this saturation curve.
-      Lower values make the index rise quickly; higher values make it increase more gradually.
+      This keeps the score bounded and prevents the metric from exploding when many incidents cluster together.
     </div>
   </div>
 </div>
@@ -292,28 +239,14 @@
   }
 
   async function loadIncidents() {
-    const res = await fetch('/api/incidents?ts=' + Date.now(), { cache: 'no-store' });
+    const res = await fetch('./incidents.json?ts=' + Date.now(), { cache: 'no-store' });
     if (!res.ok) throw new Error('Failed to load incidents.json');
     return await res.json();
   }
 
   async function loadSummary() {
-    const res = await fetch('/api/summary?ts=' + Date.now(), { cache: 'no-store' });
+    const res = await fetch('./summary.json?ts=' + Date.now(), { cache: 'no-store' });
     if (!res.ok) return null;
-    return await res.json();
-  }
-
-  async function triggerServerRefresh() {
-    const res = await fetch('/api/refresh', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({}),
-      cache: 'no-store'
-    });
-    if (!res.ok) {
-      const txt = await res.text();
-      throw new Error('Refresh failed: ' + txt);
-    }
     return await res.json();
   }
 
@@ -363,10 +296,10 @@
   function densify(points, stepsPerSeg=12) {
     if (!points || points.length < 2) return points || [];
     const out = [];
-    for (let i=0; i<points.length-1; i++) {
+    for (let i = 0; i < points.length - 1; i++) {
       const a = points[i];
       const b = points[i+1];
-      for (let s=0; s<stepsPerSeg; s++) {
+      for (let s = 0; s < stepsPerSeg; s++) {
         const t = s / stepsPerSeg;
         out.push([a[0] + t*(b[0]-a[0]), a[1] + t*(b[1]-a[1])]);
       }
@@ -377,7 +310,7 @@
 
   function hashColor(str) {
     let h = 2166136261;
-    for (let i=0; i<str.length; i++) {
+    for (let i = 0; i < str.length; i++) {
       h ^= str.charCodeAt(i);
       h = Math.imul(h, 16777619);
     }
@@ -528,7 +461,7 @@
     const listBox = $('incidentsList');
     listBox.innerHTML = '';
 
-    for (const it of [...filtered].sort((a,b) => (a.age_days||0) - (b.age_days||0)).slice(0, 250)) {
+    for (const it of [...filtered].sort((a, b) => (a.age_days || 0) - (b.age_days || 0)).slice(0, 250)) {
       const bucket = bucketLabel(it) || '';
       const col = colorForCategory(bucket);
 
@@ -587,7 +520,6 @@
     render(ALL, sel, refit);
   }
 
-  // --------- Risk modal wiring ----------
   const riskModal = $('riskModal');
   function openRiskModal() {
     riskModal.classList.add('open');
@@ -597,6 +529,7 @@
     riskModal.classList.remove('open');
     riskModal.setAttribute('aria-hidden', 'true');
   }
+
   $('riskInfoBtn').addEventListener('click', openRiskModal);
   $('riskModalClose').addEventListener('click', closeRiskModal);
   riskModal.addEventListener('click', (e) => { if (e.target === riskModal) closeRiskModal(); });
@@ -614,31 +547,7 @@
 
     const summary = await loadSummary();
     setLastUpdated(summary && summary.generated_utc ? summary.generated_utc : null);
-    setStatusText(Array.isArray(ALL) ? `OK (${ALL.length} incidents)` : 'OK');
-
-    $('refreshBtn').addEventListener('click', async () => {
-      const btn = $('refreshBtn');
-      btn.disabled = true;
-      setStatusText('Refreshing…');
-
-      try {
-        const info = await triggerServerRefresh();
-
-        ALL = await loadIncidents();
-        const buckets2 = getAllBuckets(ALL);
-        getSelectedSet = buildChecklist(buckets2);
-        update(false);
-
-        setLastUpdated(info && info.generated_utc ? info.generated_utc : null);
-        setStatusText(typeof info.n === 'number' ? `OK (${info.n} incidents)` : 'OK');
-      } catch (err) {
-        const msg = (err && err.message) ? err.message : String(err);
-        setStatusText('Failed');
-        alert(msg);
-      } finally {
-        btn.disabled = false;
-      }
-    });
+    setStatusText(Array.isArray(ALL) ? `Static build (${ALL.length} incidents)` : 'Static build');
   }
 
   boot().catch(err => alert(err.message));
