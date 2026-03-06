@@ -386,16 +386,17 @@ def build_html(radius_km: float, half_life_days: float) -> str:
   .headerRow{{ display:flex; align-items:flex-start; justify-content:space-between; gap:10px; }}
   .headerRight{{ display:flex; flex-direction:column; align-items:flex-end; gap:6px; }}
   .metaLine{{
-    font-size:12px;
+    font-size:10px;
     color:var(--muted);
     display:flex;
-    gap:6px;
+    gap:5px;
     align-items:baseline;
   }}
 
   .metaLine .val{{
     color:var(--text);
     font-weight:600;
+    font-size:10px;
   }}
 
   /* Center modal */
