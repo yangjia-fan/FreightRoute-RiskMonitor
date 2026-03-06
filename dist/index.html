@@ -239,13 +239,13 @@
   }
 
   async function loadIncidents() {
-    const res = await fetch('./incidents.json?ts=' + Date.now(), { cache: 'no-store' });
+    const res = await fetch('/api/incidents?ts=' + Date.now(), { cache: 'no-store' });
     if (!res.ok) throw new Error('Failed to load incidents.json');
     return await res.json();
   }
 
   async function loadSummary() {
-    const res = await fetch('./summary.json?ts=' + Date.now(), { cache: 'no-store' });
+    const res = await fetch('/api/summary?ts=' + Date.now(), { cache: 'no-store' });
     if (!res.ok) return null;
     return await res.json();
   }
