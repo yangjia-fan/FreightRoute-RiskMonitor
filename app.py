@@ -52,5 +52,12 @@ def api_incidents():
 
 @app.get("/api/summary")
 def api_summary():
-    reload_files_if_needed()
-    return _cache["summary"]
+    ensure_build()
+    return json.loads(SUMMARY_OUT.read_text(encoding="utf-8"))
+
+@app.post("/api/refresh")
+def api_refresh():
+    try:
+        return run_pipeline(radius_km=DEFAULT_RADIUS_KM, half_life_days=DEFAULT_HALF_LIFE_DAYS)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
