@@ -314,7 +314,7 @@ def build_html(radius_km: float, half_life_days: float) -> str:
     --border:rgba(255,255,255,0.10);
   }}
   body{{ margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; background:var(--bg); color:var(--text); }}
-  #app{{ display:grid; grid-template-columns:298px 1fr; height:100vh; }}
+  #app{{ display:grid; grid-template-columns:308px 1fr; height:100vh; }}
   #sidebar{{ border-right:1px solid var(--border); padding:14px; overflow:auto; background:var(--panel); }}
   #map{{ height:100vh; }}
 
@@ -348,7 +348,7 @@ def build_html(radius_km: float, half_life_days: float) -> str:
     border:1px solid var(--border);
     border-radius:12px;
     background:var(--panel2);
-    min-width:260px;
+    min-width:180px;
   }}
   .checkrow{{
     display:flex;
