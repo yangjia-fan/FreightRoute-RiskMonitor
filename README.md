@@ -67,7 +67,7 @@ This prevents the metric from exploding during clusters of incidents while still
 
 
 
-**EXAMPLE ROUTES**
+**EXAMPLE ROUTES** (to be replaced by company ops data)
 
 The prototype includes example shipping lanes such as:
 
@@ -75,7 +75,7 @@ The prototype includes example shipping lanes such as:
 	- Kuwait → Dubai
 	- Qatar → Arabian Sea
 
-Risk is recomputed instantly when switching routes.
+Risk is recomputed when switching routes and selecting which incidents to include.
 
 
 
@@ -83,11 +83,11 @@ Risk is recomputed instantly when switching routes.
 
 This prototype intentionally keeps the model simple. Natural next steps could include:
 
-- integrating AIS vessel traffic
-- estimating vessel exposure to risk corridors
+- integrating AIS vessel traffic (Kpler)
+- estimating vessel exposure to risk corridors, not just routes
 - linking freight rates to security conditions
-- incorporating geopolitical event feeds
-- building alerting for sudden risk spikes
+- incorporating geopolitical event feeds (various sources)
+- building alerts for sudden risk spikes
 
 
 ### **MOTIVATION**
