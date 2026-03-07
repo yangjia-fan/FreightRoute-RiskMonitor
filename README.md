@@ -2,7 +2,7 @@
 
 *Note: Refer to **Setup.md** for instructions on loading the app on your local computer
 
-A tool for monitoring maritime security incidents and estimating route-specific geopolitical risk exposure for shipping lanes.
+A modular tool for monitoring maritime security incidents using UKTMO.org and estimating route-specific geopolitical risk exposure for shipping lanes imported from company ops. Further development could be to link the tool to more robust marinetraffic sources like Kpler.
 
 The goal of this project is to prototype how real-time security intelligence could be integrated into freight trading or logistics decision workflows. Using publicly available UKMTO incident reports, the system maps incidents geographically and computes a risk index for selected routes based on severity, recency, and proximity.
 
