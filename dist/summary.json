@@ -1,11 +1,25 @@
 {
-  "generated_utc": "2026-03-10 16:22",
-  "n": 18,
+  "generated_utc": "2026-03-11 20:59",
+  "n": 22,
   "params": {
     "radius_km": 200.0,
     "half_life_days": 14.0
   },
   "top5_by_severity": [
+    {
+      "id": "UKMTO-21",
+      "incident_utc": "2026-03-11T22:30:00Z",
+      "type": "Attack",
+      "place": "Northern Arabian Gulf",
+      "severity": 20.0
+    },
+    {
+      "id": "UKMTO-19",
+      "incident_utc": "2026-03-11T06:12:00Z",
+      "type": "Attack",
+      "place": "Strait of Hormuz",
+      "severity": 20.0
+    },
     {
       "id": "UKMTO-12",
       "incident_utc": "2026-03-04T11:09:00Z",
@@ -26,20 +40,6 @@
       "type": "Attack",
       "place": "Gulf of Oman",
       "severity": 20.0
-    },
-    {
-      "id": "UKMTO-8",
-      "incident_utc": "2026-03-02T02:57:00Z",
-      "type": "Advisory",
-      "place": "Central Arabian Gulf",
-      "severity": 18.65
-    },
-    {
-      "id": "UKMTO-16",
-      "incident_utc": "2026-03-07T12:10:00Z",
-      "type": "Attack",
-      "place": "Arabian Sea",
-      "severity": 18.5
     }
   ]
 }
