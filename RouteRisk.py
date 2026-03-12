@@ -72,6 +72,15 @@ ATTEMPT_PATTERNS = [
     r"\b(attempted|attempt|unsuccessful|thwarted|repelled|prevented)\b",
 ]
 
+# Reports that are summaries / rollups / admin notices, not actual incidents
+ZERO_SEVERITY_PATTERNS = [
+    r"\btotal incident summary\b",
+    r"\breporting period\b",
+    r"\btotal attack reports?\b",
+    r"\btotal suspicious activity reports?\b",
+    r"\bdetails of these incident reports are available below\b",
+]
+
 # Escalators that push severity up if present (on top of base hits)
 ESCALATORS: List[Dict[str, Any]] = [
     {"re": r"\b(sank|sinking|taking on water)\b", "add": 4, "tags": ["catastrophic"]},
@@ -96,15 +105,20 @@ def _compile_once():
     compiled = []
     for p in BASE_PATTERNS:
         compiled.append({**p, "rx": re.compile(p["re"], flags=re.IGNORECASE)})
+
     neg = [re.compile(x, flags=re.IGNORECASE) for x in NEGATION_PATTERNS]
     unc = [re.compile(x, flags=re.IGNORECASE) for x in UNCERTAINTY_PATTERNS]
     att = [re.compile(x, flags=re.IGNORECASE) for x in ATTEMPT_PATTERNS]
+
     esc = []
     for e in ESCALATORS:
         esc.append({**e, "rx": re.compile(e["re"], flags=re.IGNORECASE)})
-    return compiled, neg, unc, att, esc
 
-_COMPILED_BASE, _COMPILED_NEG, _COMPILED_UNC, _COMPILED_ATT, _COMPILED_ESC = _compile_once()
+    zero = [re.compile(x, flags=re.IGNORECASE) for x in ZERO_SEVERITY_PATTERNS]
+
+    return compiled, neg, unc, att, esc, zero
+
+_COMPILED_BASE, _COMPILED_NEG, _COMPILED_UNC, _COMPILED_ATT, _COMPILED_ESC, _COMPILED_ZERO = _compile_once()
 
 def severity(
     text: str,
@@ -127,6 +141,10 @@ def severity(
         base = 0.0
 
     tags = set()
+
+    # Hard exclusion for rollup / summary notices
+    if t and any(rx.search(t) for rx in _COMPILED_ZERO):
+      return 0.0, ["summary_notice"]
 
     # Base hits
     for p in _COMPILED_BASE:
