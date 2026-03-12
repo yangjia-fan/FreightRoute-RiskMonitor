@@ -24,7 +24,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 0.10352386202546296
+    "age_days": 0.11058595917824073
   },
   {
     "id": "UKMTO-2026",
@@ -46,7 +46,7 @@
       "suspicious"
     ],
     "category": "Kinetic Attack",
-    "age_days": 0.7076905286921297
+    "age_days": 0.7147526258449074
   },
   {
     "id": "UKMTO-20",
@@ -71,7 +71,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 0.7389405286921297
+    "age_days": 0.7460026258449074
   },
   {
     "id": "UKMTO-19",
@@ -97,7 +97,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 0.7826905286921296
+    "age_days": 0.7897526258449075
   },
   {
     "id": "UKMTO-18",
@@ -121,7 +121,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 0.9590794175810186
+    "age_days": 0.9661415147337963
   },
   {
     "id": "UKMTO-17",
@@ -141,7 +141,7 @@
       "suspicious"
     ],
     "category": "Suspicious Activity",
-    "age_days": 1.7076905286921296
+    "age_days": 1.7147526258449075
   },
   {
     "id": "UKMTO-16",
@@ -165,7 +165,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 4.534079417581019
+    "age_days": 4.541141514733797
   },
   {
     "id": "UKMTO-15",
@@ -189,7 +189,7 @@
       "uncertain"
     ],
     "category": "Kinetic Attack",
-    "age_days": 5.50144052869213
+    "age_days": 5.5085026258449075
   },
   {
     "id": "UKMTO-14",
@@ -215,7 +215,7 @@
       "uncertain"
     ],
     "category": "Kinetic Attack",
-    "age_days": 7.03130163980324
+    "age_days": 7.0383637369560175
   },
   {
     "id": "UKMTO-12",
@@ -241,7 +241,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 7.576440528692129
+    "age_days": 7.583502625844907
   },
   {
     "id": "UKMTO-13",
@@ -265,7 +265,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 7.77505163980324
+    "age_days": 7.782113736956018
   },
   {
     "id": "UKMTO-10",
@@ -291,7 +291,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 8.02019052869213
+    "age_days": 8.027252625844907
   },
   {
     "id": "UKMTO-9",
@@ -315,7 +315,7 @@
       "uncertain"
     ],
     "category": "Suspicious Activity",
-    "age_days": 8.08269052869213
+    "age_days": 8.089752625844907
   },
   {
     "id": "UKMTO-11",
@@ -342,7 +342,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 8.103523862025462
+    "age_days": 8.11058595917824
   },
   {
     "id": "UKMTO-8",
@@ -369,7 +369,7 @@
       "uncertain"
     ],
     "category": "Kinetic Attack",
-    "age_days": 9.918107195358795
+    "age_days": 9.925169292511573
   },
   {
     "id": "UKMTO-7",
@@ -393,7 +393,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 10.343107195358796
+    "age_days": 10.350169292511573
   },
   {
     "id": "UKMTO-4",
@@ -413,7 +413,7 @@
       "response"
     ],
     "category": "Other",
-    "age_days": 10.666023862025462
+    "age_days": 10.67308595917824
   },
   {
     "id": "UKMTO-5",
@@ -438,7 +438,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 10.695884973136573
+    "age_days": 10.702947070289351
   },
   {
     "id": "UKMTO-6",
@@ -462,7 +462,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 10.704218306469906
+    "age_days": 10.711280403622684
   },
   {
     "id": "UKMTO-3",
@@ -483,7 +483,7 @@
       "level_3"
     ],
     "category": "EW / GNSS",
-    "age_days": 11.70769052869213
+    "age_days": 11.714752625844907
   },
   {
     "id": "UKMTO-2",
@@ -506,7 +506,7 @@
       "uncertain"
     ],
     "category": "Kinetic Attack",
-    "age_days": 22.613246084247685
+    "age_days": 22.620308181400464
   },
   {
     "id": "UKMTO-1",
@@ -526,6 +526,6 @@
       "suspicious"
     ],
     "category": "Suspicious Activity",
-    "age_days": 36.57505163980324
+    "age_days": 36.58211373695602
   }
 ]
