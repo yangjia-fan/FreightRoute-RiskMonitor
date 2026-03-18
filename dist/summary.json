@@ -1,11 +1,18 @@
 {
-  "generated_utc": "2026-03-16 11:48",
-  "n": 23,
+  "generated_utc": "2026-03-18 09:58",
+  "n": 24,
   "params": {
     "radius_km": 200.0,
     "half_life_days": 14.0
   },
   "top5_by_severity": [
+    {
+      "id": "UKMTO-23",
+      "incident_utc": "2026-03-16T23:01:00Z",
+      "type": "Suspicious Activity",
+      "place": "Gulf of Oman",
+      "severity": 20.0
+    },
     {
       "id": "UKMTO-21",
       "incident_utc": "2026-03-11T22:30:00Z",
@@ -30,13 +37,6 @@
     {
       "id": "UKMTO-10",
       "incident_utc": "2026-03-04T00:30:00Z",
-      "type": "Attack",
-      "place": "Gulf of Oman",
-      "severity": 20.0
-    },
-    {
-      "id": "UKMTO-11",
-      "incident_utc": "2026-03-03T22:30:00Z",
       "type": "Attack",
       "place": "Gulf of Oman",
       "severity": 20.0

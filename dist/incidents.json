@@ -7,17 +7,44 @@
     "pinColour": "Yellow",
     "place": "Persian Gulf",
     "region": "IO",
-    "published_utc": "2026-03-12T08:30:00Z",
-    "incident_utc": "2026-03-12T08:30:00Z",
+    "published_utc": "2026-03-17T09:00:00Z",
+    "incident_utc": "2026-03-17T09:00:00Z",
     "lat": 26.629444444444445,
     "lon": 56.53194444444444,
-    "otherDetails": "Total Incidents Summary. Reporting period: 28 February 2026 - 12 March 2026, 0800UTC. UKMTO has received 20 reports of incidents affecting vessels operating in and around the Arabian Gulf, Strait of Hormuz (SOH), and Gulf of Oman. Total ATTACK reports: 16. Total SUSPICIOUS ACTIVITY reports: 4.  Details of these incident reports are available below. ",
+    "otherDetails": "Total Incidents Summary. Reporting period: 28 February 2026 - 17 March 2026, 0800UTC. UKMTO has received 20 reports of incidents affecting vessels operating in and around the Arabian Gulf, Strait of Hormuz (SOH), and Gulf of Oman. Total ATTACK reports: 15. Total SUSPICIOUS ACTIVITY reports: 5.  Details of these incident reports are available below. ",
     "severity": 0.0,
     "tags": [
       "summary_notice"
     ],
     "category": "Other",
-    "age_days": 4.304597043402778
+    "age_days": 1.2073789732175926
+  },
+  {
+    "id": "UKMTO-23",
+    "incidentNumber": 23,
+    "incidentTypeName": "Suspicious Activity",
+    "incidentTypeLevel": 0,
+    "pinColour": "Red",
+    "place": "Gulf of Oman",
+    "region": "IO",
+    "published_utc": "2026-03-17T02:36:43Z",
+    "incident_utc": "2026-03-16T23:01:00Z",
+    "lat": 25.058333333333334,
+    "lon": 56.77,
+    "otherDetails": "UKMTO WARNING 23-26 - UKMTO has received a report of an incident 23NM east of Fujairah, UAE.\r\nA tanker has reported being struck by an unknown projectile whilst at anchor.\r\nMinor structural damage reported. No injuries to crew.\r\nNo environmental impact reported.\r\n\r\nUpdate- 001: The CSO has reported that investigations indicate that the vessel was subjected to falling debris from \r\ninterceptions in the vicinity of the vessel. The vessel received minor structural damage however all crew are \r\nconfirmed as safe. UKMTO have re-classified this incident as Suspicious Activity.",
+    "severity": 20.0,
+    "tags": [
+      "casualty",
+      "damage",
+      "deescalated",
+      "effect",
+      "escalated",
+      "suspicious",
+      "uncertain",
+      "weapon"
+    ],
+    "category": "Kinetic Attack",
+    "age_days": 1.6233511954398148
   },
   {
     "id": "UKMTO-22",
@@ -42,7 +69,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 4.562235932291666
+    "age_days": 6.485851195439815
   },
   {
     "id": "UKMTO-21",
@@ -69,7 +96,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 4.721263710069445
+    "age_days": 6.644878973217593
   },
   {
     "id": "UKMTO-20",
@@ -94,7 +121,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 5.3566803767361115
+    "age_days": 7.28029563988426
   },
   {
     "id": "UKMTO-19",
@@ -120,7 +147,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 5.400430376736111
+    "age_days": 7.324045639884259
   },
   {
     "id": "UKMTO-18",
@@ -144,7 +171,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 5.576819265625
+    "age_days": 7.500434528773148
   },
   {
     "id": "UKMTO-17",
@@ -164,7 +191,7 @@
       "suspicious"
     ],
     "category": "Suspicious Activity",
-    "age_days": 6.3254303767361115
+    "age_days": 8.24904563988426
   },
   {
     "id": "UKMTO-16",
@@ -188,7 +215,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 9.151819265625
+    "age_days": 11.07543452877315
   },
   {
     "id": "UKMTO-15",
@@ -212,7 +239,7 @@
       "uncertain"
     ],
     "category": "Kinetic Attack",
-    "age_days": 10.11918037673611
+    "age_days": 12.04279563988426
   },
   {
     "id": "UKMTO-14",
@@ -238,7 +265,7 @@
       "uncertain"
     ],
     "category": "Kinetic Attack",
-    "age_days": 11.649041487847223
+    "age_days": 13.57265675099537
   },
   {
     "id": "UKMTO-12",
@@ -264,7 +291,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 12.19418037673611
+    "age_days": 14.117795639884259
   },
   {
     "id": "UKMTO-13",
@@ -288,7 +315,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 12.392791487847221
+    "age_days": 14.31640675099537
   },
   {
     "id": "UKMTO-10",
@@ -314,7 +341,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 12.63793037673611
+    "age_days": 14.561545639884258
   },
   {
     "id": "UKMTO-9",
@@ -338,7 +365,7 @@
       "uncertain"
     ],
     "category": "Suspicious Activity",
-    "age_days": 12.70043037673611
+    "age_days": 14.624045639884258
   },
   {
     "id": "UKMTO-11",
@@ -365,13 +392,13 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 12.721263710069444
+    "age_days": 14.644878973217592
   },
   {
     "id": "UKMTO-8",
     "incidentNumber": 8,
-    "incidentTypeName": "Advisory",
-    "incidentTypeLevel": 3,
+    "incidentTypeName": "Attack",
+    "incidentTypeLevel": 1,
     "pinColour": "Yellow",
     "place": "Central Arabian Gulf",
     "region": "IO",
@@ -380,19 +407,19 @@
     "lat": 26.183333333333334,
     "lon": 50.583333333333336,
     "otherDetails": "UKMTO ADVISORY 008-26 - ATTACK\r\nReport Date:02 Mar 2026\r\nReport Time:0257UTC\r\nIssue Date:02 Mar 2026\r\nSource: Company Security \r\nOfficer\r\nUKMTO received a report of an incident in the Port of Bahrain. The Company Security Officer \r\nreported that the vessel had been struck by two unknown projectiles causing a fire. The fire has \r\nbeen extinguished and the vessel remains in port. All members of the ships crew are safe and have \r\nevacuated the vessel.\r\nVessels are to remain cautious and report any suspicious activity to UKMTO\r\n",
-    "severity": 18.65,
+    "severity": 16.65,
     "tags": [
       "attack",
       "damage",
       "deescalated",
       "effect",
-      "level_3",
+      "level_1",
       "response",
       "suspicious",
       "uncertain"
     ],
     "category": "Kinetic Attack",
-    "age_days": 14.535847043402777
+    "age_days": 16.459462306550925
   },
   {
     "id": "UKMTO-7",
@@ -416,13 +443,13 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 14.960847043402776
+    "age_days": 16.884462306550926
   },
   {
     "id": "UKMTO-4",
     "incidentNumber": 4,
-    "incidentTypeName": "Suspicious Activity",
-    "incidentTypeLevel": 0,
+    "incidentTypeName": "Attack",
+    "incidentTypeLevel": 1,
     "pinColour": "Red",
     "place": "Strait of Hormuz",
     "region": "IO",
@@ -431,13 +458,14 @@
     "lat": 26.483333333333334,
     "lon": 56.45,
     "otherDetails": "UKMTO WARNING 004-26. UKMTO has received a report of an incident 2NM north of Oman. The crew have been evacuated and safe. Vessels are advised to transit with caution and report any suspicious activity to UKMTO.",
-    "severity": 6.0,
+    "severity": 6.5,
     "tags": [
+      "level_1",
       "response",
       "suspicious"
     ],
     "category": "Suspicious Activity",
-    "age_days": 15.283763710069444
+    "age_days": 17.20737897321759
   },
   {
     "id": "UKMTO-5",
@@ -462,7 +490,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 15.313624821180554
+    "age_days": 17.237240084328704
   },
   {
     "id": "UKMTO-6",
@@ -486,7 +514,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 15.321958154513888
+    "age_days": 17.245573417662037
   },
   {
     "id": "UKMTO-3",
@@ -507,7 +535,7 @@
       "level_3"
     ],
     "category": "EW / GNSS",
-    "age_days": 16.32543037673611
+    "age_days": 18.249045639884258
   },
   {
     "id": "UKMTO-2",
@@ -530,7 +558,7 @@
       "uncertain"
     ],
     "category": "Kinetic Attack",
-    "age_days": 27.230985932291667
+    "age_days": 29.154601195439813
   },
   {
     "id": "UKMTO-1",
@@ -550,6 +578,6 @@
       "suspicious"
     ],
     "category": "Suspicious Activity",
-    "age_days": 41.192791487847224
+    "age_days": 43.11640675099537
   }
 ]
