@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-03-18 09:58",
+  "generated_utc": "2026-03-19 13:13",
   "n": 24,
   "params": {
     "radius_km": 200.0,
@@ -29,14 +29,14 @@
     },
     {
       "id": "UKMTO-12",
-      "incident_utc": "2026-03-04T11:09:00Z",
+      "incident_utc": "2026-03-04T11:00:00Z",
       "type": "Attack",
       "place": "Strait of Hormuz",
       "severity": 20.0
     },
     {
-      "id": "UKMTO-10",
-      "incident_utc": "2026-03-04T00:30:00Z",
+      "id": "UKMTO-11",
+      "incident_utc": "2026-03-03T23:30:00Z",
       "type": "Attack",
       "place": "Gulf of Oman",
       "severity": 20.0

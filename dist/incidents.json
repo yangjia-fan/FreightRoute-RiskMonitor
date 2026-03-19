@@ -7,17 +7,65 @@
     "pinColour": "Yellow",
     "place": "Persian Gulf",
     "region": "IO",
-    "published_utc": "2026-03-17T09:00:00Z",
-    "incident_utc": "2026-03-17T09:00:00Z",
+    "published_utc": "2026-03-19T11:00:00Z",
+    "incident_utc": "2026-03-19T11:00:00Z",
     "lat": 26.629444444444445,
     "lon": 56.53194444444444,
-    "otherDetails": "Total Incidents Summary. Reporting period: 28 February 2026 - 17 March 2026, 0800UTC. UKMTO has received 20 reports of incidents affecting vessels operating in and around the Arabian Gulf, Strait of Hormuz (SOH), and Gulf of Oman. Total ATTACK reports: 15. Total SUSPICIOUS ACTIVITY reports: 5.  Details of these incident reports are available below. ",
+    "otherDetails": "Total Incidents Summary. Reporting period: 28 February 2026 - 17 March 2026, 0800UTC. UKMTO has received 22 reports of incidents affecting vessels operating in and around the Arabian Gulf, Strait of Hormuz (SOH), and Gulf of Oman. Total ATTACK reports: 16. Total SUSPICIOUS ACTIVITY reports: 6.  Details of these incident reports are available below. ",
     "severity": 0.0,
     "tags": [
       "summary_notice"
     ],
     "category": "Other",
-    "age_days": 1.2073789732175926
+    "age_days": 0.2594269665393519
+  },
+  {
+    "id": "UKMTO-25",
+    "incidentNumber": 25,
+    "incidentTypeName": "Suspicious Activity",
+    "incidentTypeLevel": 0,
+    "pinColour": "Yellow",
+    "place": "Central Arabian Gulf",
+    "region": "IO",
+    "published_utc": "2026-03-19T03:45:22Z",
+    "incident_utc": "2026-03-19T01:30:00Z",
+    "lat": 25.85,
+    "lon": 51.666666666666664,
+    "otherDetails": "UKMTO Warning 25-26 - UKMTO has received a report of an incident 4NM east of Ras Laffan, Qatar. \r\nIt has been reported to UKMTO that a vessel has been hit by an unknown projectile. All crew are reported safe and well.\r\nVessels are advised to transit with caution and report any suspicious activity to UKMTO while authorities continue to investigate.\r\n",
+    "severity": 11.9,
+    "tags": [
+      "effect",
+      "suspicious",
+      "uncertain",
+      "weapon"
+    ],
+    "category": "Kinetic Attack",
+    "age_days": 0.6552602998726852
+  },
+  {
+    "id": "UKMTO-24",
+    "incidentNumber": 24,
+    "incidentTypeName": "Attack",
+    "incidentTypeLevel": 1,
+    "pinColour": "Red",
+    "place": "Gulf of Oman",
+    "region": "IO",
+    "published_utc": "2026-03-18T23:38:41Z",
+    "incident_utc": "2026-03-18T19:00:00Z",
+    "lat": 25.35,
+    "lon": 56.516666666666666,
+    "otherDetails": "UKMTO Warning 24-26 - UKMTO has received a report of an incident 11NM east of Khawr Fakkan, UAE. It has been reported to UKMTO that a vessel has been hit by an unknown projectile which has resulted in a fire onboard. Vessels are advised to transit with caution and report any suspicious activity to UKMTO \r\nWhile authorities continue to investigate.\r\n",
+    "severity": 15.799999999999999,
+    "tags": [
+      "damage",
+      "effect",
+      "level_1",
+      "suspicious",
+      "uncertain",
+      "weapon"
+    ],
+    "category": "Kinetic Attack",
+    "age_days": 0.9260936332060185
   },
   {
     "id": "UKMTO-23",
@@ -44,7 +92,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 1.6233511954398148
+    "age_days": 2.7587325220949075
   },
   {
     "id": "UKMTO-22",
@@ -69,7 +117,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 6.485851195439815
+    "age_days": 7.621232522094908
   },
   {
     "id": "UKMTO-21",
@@ -96,7 +144,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 6.644878973217593
+    "age_days": 7.780260299872685
   },
   {
     "id": "UKMTO-20",
@@ -121,7 +169,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 7.28029563988426
+    "age_days": 8.415676966539351
   },
   {
     "id": "UKMTO-19",
@@ -147,7 +195,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 7.324045639884259
+    "age_days": 8.459426966539352
   },
   {
     "id": "UKMTO-18",
@@ -171,7 +219,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 7.500434528773148
+    "age_days": 8.635815855428241
   },
   {
     "id": "UKMTO-17",
@@ -191,7 +239,7 @@
       "suspicious"
     ],
     "category": "Suspicious Activity",
-    "age_days": 8.24904563988426
+    "age_days": 9.384426966539351
   },
   {
     "id": "UKMTO-16",
@@ -215,7 +263,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 11.07543452877315
+    "age_days": 12.21081585542824
   },
   {
     "id": "UKMTO-15",
@@ -239,7 +287,7 @@
       "uncertain"
     ],
     "category": "Kinetic Attack",
-    "age_days": 12.04279563988426
+    "age_days": 13.178176966539352
   },
   {
     "id": "UKMTO-14",
@@ -265,7 +313,31 @@
       "uncertain"
     ],
     "category": "Kinetic Attack",
-    "age_days": 13.57265675099537
+    "age_days": 14.708038077650462
+  },
+  {
+    "id": "UKMTO-13",
+    "incidentNumber": 13,
+    "incidentTypeName": "Suspicious Activity",
+    "incidentTypeLevel": 0,
+    "pinColour": "Yellow",
+    "place": "Southern Arabian Gulf",
+    "region": "IO",
+    "published_utc": "2026-03-04T14:27:01Z",
+    "incident_utc": "2026-03-04T11:30:00Z",
+    "lat": 25.05,
+    "lon": 54.483333333333334,
+    "otherDetails": "UKMTO 013-26 - SUSPICIOUS ACTIVITY\r\nUKMTO has received a report of an incident 20NM west of Dubai.\r\nA container ship has reported witnessing a splash from an unknown projectile in close \r\nproximity to the vessel.\r\nNo damage to the vessel has been reported.\r\nVessels are advised to transit with caution and report any suspicious activity to UKMTO",
+    "severity": 9.35,
+    "tags": [
+      "damage",
+      "deescalated",
+      "suspicious",
+      "uncertain",
+      "weapon"
+    ],
+    "category": "Kinetic Attack",
+    "age_days": 15.238593633206019
   },
   {
     "id": "UKMTO-12",
@@ -276,7 +348,7 @@
     "place": "Strait of Hormuz",
     "region": "IO",
     "published_utc": "2026-03-04T12:05:05Z",
-    "incident_utc": "2026-03-04T11:09:00Z",
+    "incident_utc": "2026-03-04T11:00:00Z",
     "lat": 26.4,
     "lon": 56.333333333333336,
     "otherDetails": "UKMTO WARNING 012-26 - ATTACK\r\n\r\nUKMTO has received a report of an incident 2NM north of Oman transiting eastbound in the Straits \r\nof Hormuz.\r\nA container ship has reported being hit by an unknown projectile just above the water line causing \r\na fire in the engine room.\r\nNo environmental impact has been reported at this time.\r\nVessels are advised to transit with caution and report any suspicious activity to UKMTO.",
@@ -291,81 +363,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 14.117795639884259
-  },
-  {
-    "id": "UKMTO-13",
-    "incidentNumber": 13,
-    "incidentTypeName": "Suspicious Activity",
-    "incidentTypeLevel": 0,
-    "pinColour": "Yellow",
-    "place": "Southern Arabian Gulf",
-    "region": "IO",
-    "published_utc": "2026-03-04T14:27:01Z",
-    "incident_utc": "2026-03-04T06:23:00Z",
-    "lat": 25.05,
-    "lon": 54.483333333333334,
-    "otherDetails": "UKMTO 013-26 - SUSPICIOUS ACTIVITY\r\nUKMTO has received a report of an incident 20NM west of Dubai.\r\nA container ship has reported witnessing a splash from an unknown projectile in close \r\nproximity to the vessel.\r\nNo damage to the vessel has been reported.\r\nVessels are advised to transit with caution and report any suspicious activity to UKMTO",
-    "severity": 9.35,
-    "tags": [
-      "damage",
-      "deescalated",
-      "suspicious",
-      "uncertain",
-      "weapon"
-    ],
-    "category": "Kinetic Attack",
-    "age_days": 14.31640675099537
-  },
-  {
-    "id": "UKMTO-10",
-    "incidentNumber": 10,
-    "incidentTypeName": "Attack",
-    "incidentTypeLevel": 1,
-    "pinColour": "Red",
-    "place": "Gulf of Oman",
-    "region": "IO",
-    "published_utc": "2026-03-04T00:50:15Z",
-    "incident_utc": "2026-03-04T00:30:00Z",
-    "lat": 25.166666666666668,
-    "lon": 56.5,
-    "otherDetails": "20260304-UKMTO_WARNING_010-26\r\nATTACK\r\nIncident date:03rd March 2026\r\nIncident time:2240UTC\r\nSource: Master\r\nIssued:04th March 2026 0030UTC\r\nUKMTO has received a report of an incident 7NM east of Fujairah, United Arab Emirates. The Master reported the vessel being struck by an unknown projectile causing damage to the steel plating. There has been no fire or water intake. All crew reported safe.\r\nVessels are advised to transit with caution and report any suspicious activity to UKMTO.\r\n",
-    "severity": 20.0,
-    "tags": [
-      "attack",
-      "damage",
-      "effect",
-      "level_1",
-      "suspicious",
-      "uncertain",
-      "weapon"
-    ],
-    "category": "Kinetic Attack",
-    "age_days": 14.561545639884258
-  },
-  {
-    "id": "UKMTO-9",
-    "incidentNumber": 9,
-    "incidentTypeName": "Suspicious Activity",
-    "incidentTypeLevel": 0,
-    "pinColour": "Red",
-    "place": "Gulf of Oman",
-    "region": "IO",
-    "published_utc": "2026-03-03T23:16:18Z",
-    "incident_utc": "2026-03-03T23:00:00Z",
-    "lat": 23.333333333333332,
-    "lon": 61.016666666666666,
-    "otherDetails": "UKMTO WARNING 009-26.\r\nSUSPICIOUS ACTIVITY\r\nIncident Date: 03rd March 2026\r\nSource: Master\r\nIssue Date: 03rd March 2026 2300UTC\r\nUKMTO has received a report of an incident 137NM east of Muscat, Oman. The Master reported a loud explosion in close proximity of the vessel followed by smoke in the water. \r\nThe vessel and crew are safe.\r\nVessels are advised to transit with caution and report any suspicious activity to \r\nUKMTO.",
-    "severity": 5.95,
-    "tags": [
-      "deescalated",
-      "effect",
-      "escalated",
-      "suspicious",
-      "uncertain"
-    ],
-    "category": "Suspicious Activity",
-    "age_days": 14.624045639884258
+    "age_days": 15.259426966539351
   },
   {
     "id": "UKMTO-11",
@@ -376,7 +374,7 @@
     "place": "Gulf of Oman",
     "region": "IO",
     "published_utc": "2026-03-04T09:19:13Z",
-    "incident_utc": "2026-03-03T22:30:00Z",
+    "incident_utc": "2026-03-03T23:30:00Z",
     "lat": 25.191666666666666,
     "lon": 56.535,
     "otherDetails": "UKMTO - ATTACK - 011-26. UKMTO has received a report of an incident 10NM east of Fujairah, UAE.\r\nThe tanker experienced a loud blast and debris from an unknown projectile was found on the deck. \r\nThe funnel of the tanker sustained minor damage but no major damage has been observed with no environmental implications.\r\nAll crew are safe and accounted for.\r\nVessels are advised to transit with caution and report any suspicious activity to UKMTO.\r\n\r\n",
@@ -392,7 +390,57 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 14.644878973217592
+    "age_days": 15.738593633206019
+  },
+  {
+    "id": "UKMTO-10",
+    "incidentNumber": 10,
+    "incidentTypeName": "Attack",
+    "incidentTypeLevel": 1,
+    "pinColour": "Red",
+    "place": "Gulf of Oman",
+    "region": "IO",
+    "published_utc": "2026-03-04T00:50:15Z",
+    "incident_utc": "2026-03-03T22:30:00Z",
+    "lat": 25.166666666666668,
+    "lon": 56.5,
+    "otherDetails": "20260304-UKMTO_WARNING_010-26\r\nATTACK\r\nIncident date:03rd March 2026\r\nIncident time:2240UTC\r\nSource: Master\r\nIssued:04th March 2026 0030UTC\r\nUKMTO has received a report of an incident 7NM east of Fujairah, United Arab Emirates. The Master reported the vessel being struck by an unknown projectile causing damage to the steel plating. There has been no fire or water intake. All crew reported safe.\r\nVessels are advised to transit with caution and report any suspicious activity to UKMTO.\r\n",
+    "severity": 20.0,
+    "tags": [
+      "attack",
+      "damage",
+      "effect",
+      "level_1",
+      "suspicious",
+      "uncertain",
+      "weapon"
+    ],
+    "category": "Kinetic Attack",
+    "age_days": 15.780260299872685
+  },
+  {
+    "id": "UKMTO-9",
+    "incidentNumber": 9,
+    "incidentTypeName": "Suspicious Activity",
+    "incidentTypeLevel": 0,
+    "pinColour": "Red",
+    "place": "Gulf of Oman",
+    "region": "IO",
+    "published_utc": "2026-03-03T23:16:18Z",
+    "incident_utc": "2026-03-03T20:00:00Z",
+    "lat": 23.333333333333332,
+    "lon": 61.016666666666666,
+    "otherDetails": "UKMTO WARNING 009-26.\r\nSUSPICIOUS ACTIVITY\r\nIncident Date: 03rd March 2026\r\nSource: Master\r\nIssue Date: 03rd March 2026 2300UTC\r\nUKMTO has received a report of an incident 137NM east of Muscat, Oman. The Master reported a loud explosion in close proximity of the vessel followed by smoke in the water. \r\nThe vessel and crew are safe.\r\nVessels are advised to transit with caution and report any suspicious activity to \r\nUKMTO.",
+    "severity": 5.95,
+    "tags": [
+      "deescalated",
+      "effect",
+      "escalated",
+      "suspicious",
+      "uncertain"
+    ],
+    "category": "Suspicious Activity",
+    "age_days": 15.884426966539351
   },
   {
     "id": "UKMTO-8",
@@ -419,7 +467,7 @@
       "uncertain"
     ],
     "category": "Kinetic Attack",
-    "age_days": 16.459462306550925
+    "age_days": 17.59484363320602
   },
   {
     "id": "UKMTO-7",
@@ -443,7 +491,56 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 16.884462306550926
+    "age_days": 18.01984363320602
+  },
+  {
+    "id": "UKMTO-6",
+    "incidentNumber": 6,
+    "incidentTypeName": "Attack",
+    "incidentTypeLevel": 1,
+    "pinColour": "Yellow",
+    "place": "Strait of Hormuz",
+    "region": "IO",
+    "published_utc": "2026-03-01T14:14:13Z",
+    "incident_utc": "2026-03-01T09:08:00Z",
+    "lat": 26.216666666666665,
+    "lon": 55.9,
+    "otherDetails": "UKMTO WARNING 006-26. UKMTO has received a report of an incident 17NM northwest of Mina Saqr, United Arab Emirates. The Company Security Officer reported that the vessel been struck by an unknown projectile causing a fire. The fire has been extinguished and the vessel intends to continue on its voyage.",
+    "severity": 14.1,
+    "tags": [
+      "damage",
+      "effect",
+      "level_1",
+      "uncertain",
+      "weapon"
+    ],
+    "category": "Kinetic Attack",
+    "age_days": 18.33720474431713
+  },
+  {
+    "id": "UKMTO-5",
+    "incidentNumber": 5,
+    "incidentTypeName": "Attack",
+    "incidentTypeLevel": 1,
+    "pinColour": "Red",
+    "place": "Gulf of Oman",
+    "region": "IO",
+    "published_utc": "2026-03-01T14:12:12Z",
+    "incident_utc": "2026-03-01T09:05:00Z",
+    "lat": 24.433333333333334,
+    "lon": 58.43333333333333,
+    "otherDetails": "UKMTO WARNING 005-26. UKMTO has received a report of an incident 50NM north of Muscat, Oman. It has been reported over VHF Channel 16 that the vessel has been struck by an unknown projectile above the waterline. Although the engine room was originally reported as on fire it has now been reported that the fire is under control.\r\n",
+    "severity": 15.799999999999999,
+    "tags": [
+      "damage",
+      "effect",
+      "level_1",
+      "major_damage",
+      "uncertain",
+      "weapon"
+    ],
+    "category": "Kinetic Attack",
+    "age_days": 18.339288077650462
   },
   {
     "id": "UKMTO-4",
@@ -465,56 +562,7 @@
       "suspicious"
     ],
     "category": "Suspicious Activity",
-    "age_days": 17.20737897321759
-  },
-  {
-    "id": "UKMTO-5",
-    "incidentNumber": 5,
-    "incidentTypeName": "Attack",
-    "incidentTypeLevel": 1,
-    "pinColour": "Red",
-    "place": "Gulf of Oman",
-    "region": "IO",
-    "published_utc": "2026-03-01T14:12:12Z",
-    "incident_utc": "2026-03-01T08:17:00Z",
-    "lat": 24.433333333333334,
-    "lon": 58.43333333333333,
-    "otherDetails": "UKMTO WARNING 005-26. UKMTO has received a report of an incident 50NM north of Muscat, Oman. It has been reported over VHF Channel 16 that the vessel has been struck by an unknown projectile above the waterline. Although the engine room was originally reported as on fire it has now been reported that the fire is under control.\r\n",
-    "severity": 15.799999999999999,
-    "tags": [
-      "damage",
-      "effect",
-      "level_1",
-      "major_damage",
-      "uncertain",
-      "weapon"
-    ],
-    "category": "Kinetic Attack",
-    "age_days": 17.237240084328704
-  },
-  {
-    "id": "UKMTO-6",
-    "incidentNumber": 6,
-    "incidentTypeName": "Attack",
-    "incidentTypeLevel": 1,
-    "pinColour": "Yellow",
-    "place": "Strait of Hormuz",
-    "region": "IO",
-    "published_utc": "2026-03-01T14:14:13Z",
-    "incident_utc": "2026-03-01T08:05:00Z",
-    "lat": 26.216666666666665,
-    "lon": 55.9,
-    "otherDetails": "UKMTO WARNING 006-26. UKMTO has received a report of an incident 17NM northwest of Mina Saqr, United Arab Emirates. The Company Security Officer reported that the vessel been struck by an unknown projectile causing a fire. The fire has been extinguished and the vessel intends to continue on its voyage.",
-    "severity": 14.1,
-    "tags": [
-      "damage",
-      "effect",
-      "level_1",
-      "uncertain",
-      "weapon"
-    ],
-    "category": "Kinetic Attack",
-    "age_days": 17.245573417662037
+    "age_days": 18.342760299872687
   },
   {
     "id": "UKMTO-3",
@@ -535,49 +583,6 @@
       "level_3"
     ],
     "category": "EW / GNSS",
-    "age_days": 18.249045639884258
-  },
-  {
-    "id": "UKMTO-2",
-    "incidentNumber": 2,
-    "incidentTypeName": "Suspicious Activity",
-    "incidentTypeLevel": 0,
-    "pinColour": "Red",
-    "place": "Bab el Mandeb",
-    "region": "IO",
-    "published_utc": "2026-02-17T11:33:18Z",
-    "incident_utc": "2026-02-17T10:16:00Z",
-    "lat": 12.3,
-    "lon": 43.85,
-    "otherDetails": "UKMTO WARNING 002-2026. \r\nUKMTO received a report of an incident 70NM southwest of Aden, Yemen. A vessel was \r\napproached and hailed by one white skiff, with five persons onboard. This was followed \r\nby an exchange of small arms fire. Two additional skiffs were also reported in the \r\nvicinity. Update 001 UKMTO have been made aware that only warning shots were fired and no weapons were directed at \r\neither vessel. This incident has now been downgraded to suspicious activity.",
-    "severity": 8.5,
-    "tags": [
-      "damage",
-      "kinetic",
-      "suspicious",
-      "uncertain"
-    ],
-    "category": "Kinetic Attack",
-    "age_days": 29.154601195439813
-  },
-  {
-    "id": "UKMTO-1",
-    "incidentNumber": 1,
-    "incidentTypeName": "Suspicious Activity",
-    "incidentTypeLevel": 0,
-    "pinColour": "Yellow",
-    "place": "Strait of Hormuz",
-    "region": "IO",
-    "published_utc": "2026-02-03T11:16:51Z",
-    "incident_utc": "2026-02-03T11:11:00Z",
-    "lat": 26.6,
-    "lon": 56.516666666666666,
-    "otherDetails": "UKMTO ADVISORY 001-26- SUSPICIOUS ACTIVITY\r\nReport Date: 03 Feb 2026\r\nReport Time:0900 UTC\r\nIssue Date: 03 Feb 2026\r\nSource: Master\r\n\r\nUKMTO has received a report of an incident 16NM north of Oman within the inbound \r\nTSS of the Straits of Hormuz.\r\nA vessel has been hailed on VHF by numerous small armed vessels. The vessel has \r\nignored the request to stop and has continued on its planned route.\r\nVessels are advised to transit with caution and report any suspicious activity to \r\nUKMTO.",
-    "severity": 2.0,
-    "tags": [
-      "suspicious"
-    ],
-    "category": "Suspicious Activity",
-    "age_days": 43.11640675099537
+    "age_days": 19.38442696653935
   }
 ]
