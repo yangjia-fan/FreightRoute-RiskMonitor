@@ -1,5 +1,25 @@
 [
   {
+    "id": "UKMTO-2026",
+    "incidentNumber": 2026,
+    "incidentTypeName": "Advisory",
+    "incidentTypeLevel": 3,
+    "pinColour": "Yellow",
+    "place": "Persian Gulf",
+    "region": "IO",
+    "published_utc": "2026-03-23T07:30:00Z",
+    "incident_utc": "2026-03-23T07:30:00Z",
+    "lat": 26.629444444444445,
+    "lon": 56.53194444444444,
+    "otherDetails": "Total Incidents Summary. Reporting period: 28 February 2026 - 17 March 2026, 0800UTC. UKMTO has received 23 reports of incidents affecting vessels operating in and around the Arabian Gulf, Strait of Hormuz (SOH), and Gulf of Oman. Total ATTACK reports: 16. Total SUSPICIOUS ACTIVITY reports: 7.  Details of these incident reports are available below. ",
+    "severity": 0.0,
+    "tags": [
+      "summary_notice"
+    ],
+    "category": "Other",
+    "age_days": 0.5540722105902778
+  },
+  {
     "id": "UKMTO-26",
     "incidentNumber": 26,
     "incidentTypeName": "Suspicious Activity",
@@ -11,7 +31,7 @@
     "incident_utc": "2026-03-22T00:23:00Z",
     "lat": 25.533333333333335,
     "lon": 55.25,
-    "otherDetails": "UKMTO has received a report of an incident 15NM north of Sharjah, United Arab \r\nEmirates. The Master of a Bulk Carrier reported an explosion from an unknown \r\nprojectile in close proximity to the vessel. All crew are reported safe.\r\nUpdate 001: UKMTO ATTACK Warning 026-26 has been reclassified after review determined the intended target could not be conclusively identified.\r\nAuthorities are investigating. \r\nVessels are advised to transit with caution and report any suspicious activity to UKMTO.\r\n\r\n",
+    "otherDetails": "UKMTO WARNING 026-2026. UKMTO has received a report of an incident 15NM north of Sharjah, United Arab \r\nEmirates. The Master of a Bulk Carrier reported an explosion from an unknown \r\nprojectile in close proximity to the vessel. All crew are reported safe.\r\nUpdate 001: UKMTO ATTACK Warning 026-26 has been reclassified after review determined the intended target could not be conclusively identified.\r\nAuthorities are investigating. \r\nVessels are advised to transit with caution and report any suspicious activity to UKMTO.\r\n\r\n",
     "severity": 18.7,
     "tags": [
       "attack",
@@ -22,51 +42,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 0.8112083092939815
-  },
-  {
-    "id": "UKMTO-28082036",
-    "incidentNumber": 28082036,
-    "incidentTypeName": "Attack",
-    "incidentTypeLevel": 1,
-    "pinColour": "Red",
-    "place": "Southern Arabian Gulf",
-    "region": "IO",
-    "published_utc": "2026-03-22T00:27:20Z",
-    "incident_utc": "2026-03-22T00:23:00Z",
-    "lat": 25.533333333333335,
-    "lon": 55.25,
-    "otherDetails": "UKMTO has received a report of an incident 15NM north of Sharjah, United Arab \r\nEmirates. The Master of a Bulk Carrier reported an explosion from an unknown \r\nprojectile in close proximity to the vessel. All crew are reported safe.",
-    "severity": 12.4,
-    "tags": [
-      "effect",
-      "escalated",
-      "level_1",
-      "uncertain",
-      "weapon"
-    ],
-    "category": "Kinetic Attack",
-    "age_days": 0.8112083092939815
-  },
-  {
-    "id": "UKMTO-2026",
-    "incidentNumber": 2026,
-    "incidentTypeName": "Advisory",
-    "incidentTypeLevel": 3,
-    "pinColour": "Yellow",
-    "place": "Persian Gulf",
-    "region": "IO",
-    "published_utc": "2026-03-19T11:00:00Z",
-    "incident_utc": "2026-03-19T11:00:00Z",
-    "lat": 26.629444444444445,
-    "lon": 56.53194444444444,
-    "otherDetails": "Total Incidents Summary. Reporting period: 28 February 2026 - 17 March 2026, 0800UTC. UKMTO has received 22 reports of incidents affecting vessels operating in and around the Arabian Gulf, Strait of Hormuz (SOH), and Gulf of Oman. Total ATTACK reports: 16. Total SUSPICIOUS ACTIVITY reports: 6.  Details of these incident reports are available below. ",
-    "severity": 0.0,
-    "tags": [
-      "summary_notice"
-    ],
-    "category": "Other",
-    "age_days": 3.3688471981828703
+    "age_days": 1.8505999883680555
   },
   {
     "id": "UKMTO-25",
@@ -89,7 +65,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 3.7646805315162033
+    "age_days": 4.804072210590277
   },
   {
     "id": "UKMTO-24",
@@ -114,7 +90,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 4.035513864849537
+    "age_days": 5.074905543923611
   },
   {
     "id": "UKMTO-23",
@@ -141,7 +117,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 5.868152753738426
+    "age_days": 6.9075444328125
   },
   {
     "id": "UKMTO-22",
@@ -166,7 +142,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 10.730652753738426
+    "age_days": 11.7700444328125
   },
   {
     "id": "UKMTO-21",
@@ -193,7 +169,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 10.889680531516204
+    "age_days": 11.929072210590277
   },
   {
     "id": "UKMTO-20",
@@ -218,7 +194,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 11.525097198182872
+    "age_days": 12.564488877256945
   },
   {
     "id": "UKMTO-19",
@@ -244,7 +220,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 11.56884719818287
+    "age_days": 12.608238877256946
   },
   {
     "id": "UKMTO-18",
@@ -268,7 +244,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 11.74523608707176
+    "age_days": 12.784627766145835
   },
   {
     "id": "UKMTO-17",
@@ -288,7 +264,7 @@
       "suspicious"
     ],
     "category": "Suspicious Activity",
-    "age_days": 12.49384719818287
+    "age_days": 13.533238877256945
   },
   {
     "id": "UKMTO-16",
@@ -312,7 +288,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 15.320236087071759
+    "age_days": 16.359627766145834
   },
   {
     "id": "UKMTO-15",
@@ -336,7 +312,7 @@
       "uncertain"
     ],
     "category": "Kinetic Attack",
-    "age_days": 16.28759719818287
+    "age_days": 17.326988877256944
   },
   {
     "id": "UKMTO-14",
@@ -362,7 +338,7 @@
       "uncertain"
     ],
     "category": "Kinetic Attack",
-    "age_days": 17.81745830929398
+    "age_days": 18.856849988368058
   },
   {
     "id": "UKMTO-13",
@@ -386,7 +362,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 18.348013864849538
+    "age_days": 19.387405543923613
   },
   {
     "id": "UKMTO-12",
@@ -412,7 +388,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 18.36884719818287
+    "age_days": 19.408238877256945
   },
   {
     "id": "UKMTO-11",
@@ -439,7 +415,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 18.848013864849538
+    "age_days": 19.887405543923613
   },
   {
     "id": "UKMTO-10",
@@ -465,7 +441,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 18.889680531516202
+    "age_days": 19.929072210590277
   },
   {
     "id": "UKMTO-9",
@@ -489,7 +465,7 @@
       "uncertain"
     ],
     "category": "Suspicious Activity",
-    "age_days": 18.99384719818287
+    "age_days": 20.033238877256945
   },
   {
     "id": "UKMTO-8",
@@ -516,7 +492,7 @@
       "uncertain"
     ],
     "category": "Kinetic Attack",
-    "age_days": 20.704263864849537
+    "age_days": 21.743655543923612
   },
   {
     "id": "UKMTO-7",
@@ -540,7 +516,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 21.129263864849538
+    "age_days": 22.168655543923613
   },
   {
     "id": "UKMTO-6",
@@ -564,7 +540,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 21.446624975960646
+    "age_days": 22.486016655034724
   },
   {
     "id": "UKMTO-5",
@@ -589,7 +565,7 @@
       "weapon"
     ],
     "category": "Kinetic Attack",
-    "age_days": 21.44870830929398
+    "age_days": 22.488099988368056
   },
   {
     "id": "UKMTO-4",
@@ -611,7 +587,7 @@
       "suspicious"
     ],
     "category": "Suspicious Activity",
-    "age_days": 21.452180531516202
+    "age_days": 22.491572210590277
   },
   {
     "id": "UKMTO-3",
@@ -632,6 +608,6 @@
       "level_3"
     ],
     "category": "EW / GNSS",
-    "age_days": 22.49384719818287
+    "age_days": 23.533238877256945
   }
 ]
